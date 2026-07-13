@@ -1,0 +1,86 @@
+# =============================================================================
+# .dockerignore — va_cloudagentsconnector (C++ AI Engine)
+# =============================================================================
+
+# --- CMake / build output ---
+build/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+*.ninja
+.ninja_log
+compile_commands.json
+
+# --- Object files & binaries ---
+*.o
+*.a
+*.so
+*.so.*
+*.dylib
+*.dll
+*.exe
+*.out
+
+# --- CUDA ---
+*.cubin
+*.fatbin
+*.ptx
+
+# --- vcpkg installed trees (re-fetched during build) ---
+vcpkg_installed/
+.vcpkg/
+
+# --- Logs ---
+logs/
+*.log
+
+# --- Local data / model weights (large, not part of image) ---
+data/
+
+# --- Environment & secrets ---
+.env
+.env.*
+!.env.example
+certs/
+*.pem
+*.key
+*.crt
+secrets/
+
+# --- Deployment / docs (not needed inside image) ---
+deployment/
+nginx/
+*.md
+!README.md
+
+# --- Shell scripts (not needed inside image) ---
+*.sh
+!entrypoint.sh
+
+# --- Docker files (not needed inside image) ---
+Dockerfile*
+docker-compose*.yml
+.dockerignore
+
+# --- Editor / IDE ---
+.vscode/
+.idea/
+*.iml
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# --- Git ---
+.git/
+.gitignore
+.gitattributes
+
+# --- Test output ---
+Testing/
+test-results/
+*.gcov
+*.gcda
+*.gcno

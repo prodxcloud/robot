@@ -1,0 +1,20 @@
+# Remote model catalog for VA AgentControl
+# These models are served by the SLM-Models Python service.
+# This application does NOT load or run models locally.
+# Set slm_service.url in server.yaml (or SLM_SERVICE_URL env var) to point to SLM-Models.
+
+models:
+  - id: "llama-7b-q4"
+    name: "LLaMA 7B Q4"
+    provider: "slm-models"
+    endpoint: ""   # inherits slm_service.url
+
+  - id: "mistral-7b"
+    name: "Mistral 7B"
+    provider: "slm-models"
+    endpoint: ""
+
+  - id: "bert-base-onnx"
+    name: "BERT Base ONNX"
+    provider: "slm-models"
+    endpoint: ""

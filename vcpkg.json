@@ -1,0 +1,21 @@
+{
+  "name": "prodxcloud-ai-engine",
+  "version-string": "1.0.0",
+  "description": "VA AgentControl — Agent orchestration, connections, studio, file management. Model execution is delegated to SLM-Models service.",
+  "dependencies": [
+    "crow",
+    "spdlog",
+    "nlohmann-json",
+    "grpc",
+    "protobuf",
+    "arrow",
+    "prometheus-cpp",
+    "opentelemetry-cpp",
+    "yaml-cpp",
+    "sqlite3",
+    "openssl",
+    "gtest",
+    "benchmark"
+  ],
+  "builtin-baseline": "2024.01.12"
+}

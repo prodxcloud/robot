@@ -1,0 +1,34 @@
+syntax = "proto3";
+
+package prodxcloud.inference.v1;
+
+option cc_enable_arenas = true;
+
+service InferenceService {
+    rpc Infer(InferenceRequest) returns (InferenceResponse);
+    rpc InferStream(InferenceRequest) returns (stream InferenceToken);
+}
+
+message InferenceRequest {
+    string request_id  = 1;
+    string tenant_id   = 2;
+    string model_id    = 3;
+    string prompt      = 4;
+    int32 max_tokens   = 5;
+    float temperature  = 6;
+}
+
+message InferenceResponse {
+    string request_id       = 1;
+    string output_text      = 2;
+    int32 tokens_generated  = 3;
+    double latency_ms       = 4;
+    string model_id         = 5;
+}
+
+message InferenceToken {
+    string request_id = 1;
+    string token      = 2;
+    int32 index       = 3;
+    bool is_final     = 4;
+}

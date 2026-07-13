@@ -1,0 +1,30 @@
+# Build
+build/
+build-*/
+cmake-build-*/
+compile_commands.json
+
+# Artifacts
+*.o
+*.a
+*.so
+*.exe
+core
+core.*
+
+# Logs / local state
+logs/
+*.log
+
+# Secrets — the robot ships none, and neither should the repo
+.env
+.env.*
+!.env.example
+certs/
+*.pem
+*.key
+
+# Editors
+.vscode/
+.idea/
+.cache/
